@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   
 <title>Zoë Beauty & Wellness</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    
 /* ===== EDIT YOUR DETAILS HERE (also see the CONFIG in the script at the bottom) ===== */
 :root{--sage:#9AAA9C;--blue:#89AABD;--cream:#F3F0E8;--sand:#CFC2AF;--char:#3F4748;--ink:#34546B;--mist:#DDE5EA}
 *{box-sizing:border-box;margin:0}
@@ -251,7 +247,7 @@ const SITE={
   phone:'[Phone number]', whatsappNumber:'[WhatsApp number]', email:'[Email address]', address:'[Full address]',
   area:'Centurion, South Africa',
   instagram:'https://instagram.com/zoe.beautywellness', handle:'@zoe.beautywellness',
-  whatsapp:'https://wa.me/27000000000?text=Hi%20Zo%C3%AB%2C%20I%27d%20like%20to%20book' // TODO: replace with real number
+  whatsapp:'https://wa.me/27000000000?text=Hi%20Zo%C3%AB%2C%20I%27d%20like%20to%20book'
 };
 
 /* Moodboard Imagery Mapping */
@@ -283,7 +279,18 @@ const SERVICES=[
 const WHY=['Personalised care','Calm environment','Small intimate studio','Quality products','Hygiene','Self-care','Beauty and wellness together'];
 const VALUES=[['Calm','A quiet room, soft light and no rush.'],['Renew','Leave feeling refreshed, inside and out.'],['Balance','Beauty and wellness, side by side.'],['Self care','Not a luxury, a necessity.']];
 const CATS=['Skincare','Body care','Nail care','Gift ideas'];
-const PRODUCTS=CATS.flatMap((c,i)=>[1,2].map(n=>({cat:c,name:'Nourishing '+c+' '+n,desc:'Handcrafted gentle formulation for daily care.',price:[120,250,80,450][i]+n*30,img:[IMAGES.prod1,IMAGES.prod2,IMAGES.prod3][(i+n)%3]})));
+
+const PRODUCTS = [
+  {cat:'Skincare', name:'Nourishing Skincare 1', desc:'Handcrafted gentle formulation for daily care.', price:150, img:IMAGES.prod1},
+  {cat:'Skincare', name:'Nourishing Skincare 2', desc:'Handcrafted gentle formulation for daily care.', price:180, img:IMAGES.prod2},
+  {cat:'Body care', name:'Nourishing Body care 1', desc:'Handcrafted gentle formulation for daily care.', price:280, img:IMAGES.prod3},
+  {cat:'Body care', name:'Nourishing Body care 2', desc:'Handcrafted gentle formulation for daily care.', price:310, img:IMAGES.prod1},
+  {cat:'Nail care', name:'Nourishing Nail care 1', desc:'Handcrafted gentle formulation for daily care.', price:110, img:IMAGES.prod2},
+  {cat:'Nail care', name:'Nourishing Nail care 2', desc:'Handcrafted gentle formulation for daily care.', price:140, img:IMAGES.prod3},
+  {cat:'Gift ideas', name:'Nourishing Gift ideas 1', desc:'Handcrafted gentle formulation for daily care.', price:480, img:IMAGES.prod1},
+  {cat:'Gift ideas', name:'Nourishing Gift ideas 2', desc:'Handcrafted gentle formulation for daily care.', price:510, img:IMAGES.prod2}
+];
+
 const GALLERY=['flowers','shelf','nails','chair','tea','room'];
 const NAV=[['Home','/'],['Services','/services'],['About','/about'],['Book','/book'],['Shop','/shop'],['Gift Vouchers','/gift-vouchers'],['Contact','/contact']];
 
@@ -334,8 +341,8 @@ $('#prods').onclick=e=>{if(e.target.classList.contains('add')){$('#bk').textCont
 let amt=500;
 function drawAmts(){$('#amts').innerHTML=[250,500,750,1000].map(a=>`<button role="radio" aria-checked="${a===amt}" class="${a===amt?'sel':''}" data-a="${a}">R${a.toLocaleString('en-ZA')}</button>`).join('');$('#amtField').value=amt;$('#amtShow').textContent='R'+amt}
 drawAmts();$('#amts').onclick=e=>{if(e.target.dataset.a){amt=+e.target.dataset.a;drawAmts()}};  /* forms */ $$('form.f').forEach(f=>f.addEventListener('submit',async e=>{
- e.preventDefault();await submitForm(f.dataset.kind,Object.fromEntries(new FormData(f)));
- f.outerHTML=`<div class="ok" role="status">${f.dataset.done}</div>`;
+  e.preventDefault();await submitForm(f.dataset.kind,Object.fromEntries(new FormData(f)));
+  f.outerHTML=`<div class="ok" role="status">${f.dataset.done}</div>`;
 }));
 
 /* mobile menu */
