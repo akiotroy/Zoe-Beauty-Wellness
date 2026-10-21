@@ -1,10 +1,15 @@
 <html>
+
 <html lang="en">
+  
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  
 <title>Zoë Beauty & Wellness</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
-<style>
+  <style>
+    
 /* ===== EDIT YOUR DETAILS HERE (also see the CONFIG in the script at the bottom) ===== */
 :root{--sage:#9AAA9C;--blue:#89AABD;--cream:#F3F0E8;--sand:#CFC2AF;--char:#3F4748;--ink:#34546B;--mist:#DDE5EA}
 *{box-sizing:border-box;margin:0}
