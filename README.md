@@ -323,7 +323,7 @@ function drawShop(){
 }
 drawShop();
 $('#cats').onclick=e=>{if(e.target.dataset.c){cat=e.target.dataset.c;drawShop()}};
-$('#prods').onclick=e=>{if(e.target.classList.contains('add')){$('#bk'].textContent=++basket}};
+$('#prods').onclick=e=>{if(e.target.classList.contains('add')){$('#bk').textContent=++basket}};
 
 /* vouchers */
 let amt=500;
