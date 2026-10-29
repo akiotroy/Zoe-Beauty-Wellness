@@ -94,7 +94,7 @@ footer{background:var(--mist);border-radius:40px 40px 0 0;margin-top:40px}
 footer .in{max-width:1100px;margin:auto;padding:50px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px}
 footer ul{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:14px}
 footer .cp{border-top:1px solid rgba(207,194,175,.7);text-align:center;font-size:12px;padding:18px}
-.lf{width:34px;height:50px;color:var(--ink);display:block;margin-bottom:10px}
+.lf{width:48px;height:48px;color:var(--ink);display:block;margin-bottom:10px;transition:transform .8s cubic-bezier(.3,1.4,.5,1)}.lf:hover{transform:rotate(45deg) scale(1.1)}
 /* Midstream Glow Card */
 .mid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}@media(max-width:860px){.mid{grid-template-columns:1fr;gap:36px}}
 .gc{background:var(--ink);color:var(--cream);border-radius:28px;padding:26px 24px;max-width:460px;width:100%;margin:auto;box-shadow:0 24px 50px rgba(52,84,107,.28);position:relative;overflow:hidden}
@@ -104,7 +104,7 @@ footer .cp{border-top:1px solid rgba(207,194,175,.7);text-align:center;font-size
 .gc .gr{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 14px;position:relative;z-index:1}
 .sl{aspect-ratio:1;border-radius:50%;border:1.5px dashed rgba(243,240,232,.55);display:grid;place-items:center;color:var(--cream);background:transparent;font:400 .85rem Inter;cursor:pointer;transition:background .3s}
 .sl.on{background:var(--cream);border:1.5px solid var(--cream);color:var(--ink)}
-.sl svg{width:40%;height:60%}
+.sl svg{width:62%;height:62%}
 .sl.gift{border-color:var(--sand);color:var(--sand);font:500 1.1rem/1 Caveat,cursive;text-align:center}
 .sl.pop{animation:pop .55s cubic-bezier(.3,1.6,.5,1)}
 .gc .st{font-size:13px;position:relative;z-index:1;min-height:40px}
@@ -157,7 +157,7 @@ footer{border-radius:60px 60px 0 0}footer a{transition:color .25s,transform .25s
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="lf" viewBox="0 0 60 90"><path d="M30 88V30M30 60c-10-2-16-10-16-20 10 2 16 10 16 20zM30 48c10-2 16-10 16-20-10 2-16 10-16 20zM30 30C22 22 22 10 30 2c8 8 8 20 0 28z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="lf" viewBox="0 0 100 100"><g stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><g fill="#CFC2AF"><ellipse id="pt" cx="50" cy="19" rx="7" ry="16"/><use href="#pt" transform="rotate(30 50 50)"/><use href="#pt" transform="rotate(60 50 50)"/><use href="#pt" transform="rotate(90 50 50)"/><use href="#pt" transform="rotate(120 50 50)"/><use href="#pt" transform="rotate(150 50 50)"/><use href="#pt" transform="rotate(180 50 50)"/><use href="#pt" transform="rotate(210 50 50)"/><use href="#pt" transform="rotate(240 50 50)"/><use href="#pt" transform="rotate(270 50 50)"/><use href="#pt" transform="rotate(300 50 50)"/><use href="#pt" transform="rotate(330 50 50)"/></g><circle cx="50" cy="50" r="17" fill="currentColor"/><circle cx="50" cy="50" r="10" fill="none" stroke="#F3F0E8" stroke-width="1.4" stroke-dasharray="1 3.2" stroke-linecap="round"/><circle cx="50" cy="50" r="3" fill="#F3F0E8" stroke="none"/></g></symbol></svg>
 <header>
   <div class="bar">
     <a href="#/" class="logo" aria-label="Zoë home"><b>ZOË</b><small>BEAUTY &amp; WELLNESS</small></a>
@@ -174,7 +174,7 @@ footer{border-radius:60px 60px 0 0}footer a{transition:color .25s,transform .25s
     <i class="blob" style="width:300px;height:300px;background:var(--blue);left:-80px;top:20px"></i>
     <i class="blob" style="width:260px;height:260px;background:var(--sage);right:-60px;bottom:0"></i>
     <div class="t">
-      <svg class="lf" style="width:44px;height:64px"><use href="#lf"/></svg>
+      <svg class="lf" style="width:64px;height:64px" viewBox="0 0 100 100"><use href="#lf"/></svg>
       <h1>ZOË</h1><p class="lab" style="letter-spacing:.36em;margin:10px 0 14px">BEAUTY &amp; WELLNESS</p>
       <p class="script" id="tag"></p>
       <p class="l">A calm, intimate space where beauty, self-care and wellness come together. We believe in feeling good in your skin, inside and out. It’s more than a treatment, it’s a moment for you.</p>
@@ -315,7 +315,7 @@ footer{border-radius:60px 60px 0 0}footer a{transition:color .25s,transform .25s
 
 <footer>
   <div class="in">
-    <div><svg class="lf"><use href="#lf"/></svg><p class="serif" style="font-size:2.4rem;letter-spacing:.1em">ZOË</p><p class="lab">BEAUTY &amp; WELLNESS</p><p class="script" id="ftag" style="margin-top:10px"></p></div>
+    <div><svg class="lf" viewBox="0 0 100 100"><use href="#lf"/></svg><p class="serif" style="font-size:2.4rem;letter-spacing:.1em">ZOË</p><p class="lab">BEAUTY &amp; WELLNESS</p><p class="script" id="ftag" style="margin-top:10px"></p></div>
     <ul id="fnav"></ul>
     <div style="font-size:14px;display:grid;gap:8px;align-content:start"><a id="ig" target="_blank" rel="noreferrer"></a><a id="wa2" target="_blank" rel="noreferrer">WhatsApp</a><p id="area"></p></div>
   </div>
@@ -345,7 +345,7 @@ async function submitForm(kind,data){console.info('[Zoë]',kind,data);return {ok
 
 /* ===== Build ===== */
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-const LF='<svg viewBox="0 0 60 90"><use href="#lf"/></svg>';
+const LF='<svg viewBox="0 0 100 100"><use href="#lf"/></svg>';
 const ph=(k,a)=>IMAGES[k]?`<img src="${IMAGES[k]}" alt="${a}" loading="lazy" onerror="this.remove()">`:'';
 /* Matching illustrations (shown when no photo is set or a photo fails to load) */
 const B='#89AABD',S='#9AAA9C',D='#CFC2AF',M='#DDE5EA',I='#34546B',f=(c,o=.6)=>`fill="${c}" fill-opacity="${o}"`;
